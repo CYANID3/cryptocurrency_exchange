@@ -24,12 +24,11 @@
       <div class="az-header az-header-dashboard-four">
         <div class="container-fluid">
           <div class="az-header-left">
-            <a href="index.html" class="az-logo">az<span>i</span>a</a>
+            <a href="index.html" class="az-logo">Бирж<span>а</spa>
             <a href="" id="azNavShow" class="az-header-menu-icon d-lg-none"><span></span></a>
           </div><!-- az-header-left -->
           <div class="az-header-center">
-            <input type="search" class="form-control" placeholder="Search for schedules and events...">
-            <button class="btn"><i class="fas fa-search"></i></button>
+            
           </div><!-- az-header-center -->
           <div class="az-header-right">
             <div class="az-header-message">
@@ -87,12 +86,10 @@
                     <img src="https://via.placeholder.com/500x500" alt="">
                   </div><!-- az-img-user -->
                   <h6>Aziana Pechon</h6>
-                  <span>Premium Member</span>
                 </div><!-- az-header-profile -->
   
                 <a href="" class="dropdown-item"><i class="typcn typcn-user-outline"></i> My Profile</a>
                 <a href="" class="dropdown-item"><i class="typcn typcn-edit"></i> Edit Profile</a>
-                <a href="" class="dropdown-item"><i class="typcn typcn-time"></i> Activity Logs</a>
                 <a href="" class="dropdown-item"><i class="typcn typcn-cog-outline"></i> Account Settings</a>
                 <a href="page-signin.html" class="dropdown-item"><i class="typcn typcn-power-outline"></i> Sign Out</a>
               </div><!-- dropdown-menu -->
@@ -112,19 +109,18 @@
       <div class="card card-minimal-two">
         <div class="card-header">
           <nav class="nav nav-pills">
-            <a class="nav-link active" data-toggle="tab" href="#">BTH</a>
+            <a class="nav-link active" data-toggle="tab" href="#">AU</a>
             <a class="nav-link" data-toggle="tab" href="#">ETH</a>
             <a class="nav-link" data-toggle="tab" href="#">LTC</a>
-            <a class="nav-link" data-toggle="tab" href="#">BTG</a>
           </nav>
           <div class="card-header-right">
             <nav class="nav nav-pills">
-              <a href="" class="nav-link"><span>hour</span><span>h</span></a>
-              <a href="" class="nav-link active"><span>day</span><span>d</span></a>
-              <a href="" class="nav-link"><span>week</span><span>w</span></a>
-              <a href="" class="nav-link"><span>month</span><span>m</span></a>
-              <a href="" class="nav-link"><span>year</span><span>y</span></a>
-              <a href="" class="nav-link">All</a>
+              <a href="" class="nav-link"><span>Час</span><span>h</span></a>
+              <a href="" class="nav-link active"><span>день</span><span>d</span></a>
+              <a href="" class="nav-link"><span>неделя </span><span>w</span></a>
+              <a href="" class="nav-link"><span>месяц </span><span>m</span></a>
+              <a href="" class="nav-link"><span>год</span><span>y</span></a>
+              <a href="" class="nav-link">Всё</a>
             </nav>
           </div><!-- card-header-right -->
         </div>
@@ -142,23 +138,23 @@
             <div class="media-body">
               <div class="row row-sm">
                 <div class="col">
-                  <label>Symbol</label>
-                  <p>BTC</p>
+                  <label>СИМВОЛ </label>
+                  <p>AU</p>
                 </div>
                 <div class="col-3">
-                  <label>Price Benchmark</label>
+                  <label>ЦЕНА ЭТАЛОН</label>
                   <p>100.00%</p>
                 </div>
                 <div class="col">
-                  <label>Price (USD)</label>
+                  <label>Цена (USD)</label>
                   <p>$6,316.88</p>
                 </div>
                 <div class="col">
-                  <label>Change (24H)</label>
+                  <label>ИЗМЕНЕНИЕ (24Ч)</label>
                   <p>-0.54%</p>
                 </div>
                 <div class="col">
-                  <label>Market Cap</label>
+                  <label>РЫНОЧНАЯ КАПИТАЛИЗАЦИЯ</label>
                   <p>$109.04B</p>
                 </div>
               </div><!-- row -->
@@ -193,7 +189,7 @@
             <div class="card card-dashboard-events">
               <div class="card-header">
                 <h6 class="card-title">November 2018</h6>
-                <h5 class="card-subtitle">Upcoming Events</h5>
+                <h5 class="card-subtitle">Новости</h5>
               </div><!-- card-header -->
               <div class="card-body">
                 <div class="list-group">
@@ -269,5 +265,216 @@
 
     <script src="js/azia.js"></script>
     <script src="js/chart.flot.sampledata.js"></script>
+    <script>
+      $(function(){
+        'use strict'
+
+        $.plot('#flotChart1', [{
+            data: flotSampleData1,
+            color: '#494c57'
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: false,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 0.2 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0,
+            aboveData: true
+          },
+    			yaxis: {
+            show: false,
+            reserveSpace: false,
+            min: 0,
+            max: 120
+          },
+    			xaxis: {
+            show: true,
+            color: 'rgba(102,16,242,.1)',
+            reserveSpace: false,
+            ticks: [[0,'1h'],[20,'12h'],[40,'1d'],[60,'1w'],[80,'1m']],
+            font: {
+              size: 11,
+              weight: '700',
+              family: 'Archivo,Arial,sans-serif',
+              color: '#969dab'
+            }
+          }
+    		});
+
+        $.plot('#flotChart2', [{
+            data: flotSampleData2,
+            color: '#6610f2'
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 0.2 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0,
+            aboveData: true
+          },
+    			yaxis: {
+            show: true,
+            color: 'rgba(0,0,0,0.06)',
+            ticks: [[0, ''], [15, '$6320'], [30, '$6340'], [45, '$6360'], [60, '$6380'], [75, '$6400']],
+            min: 0,
+            max: 80,
+            font: {
+              size: 11,
+              weight: '600',
+              family: 'Archivo, sans-serif',
+              color: '#343640'
+            }
+          },
+    			xaxis: {
+            show: true,
+            color: 'rgba(0,0,0,0.1)',
+            ticks: [[0, '06:00'], [20, '09:00'], [40, '12:00'], [60, '13:00'], [80, '16:00'], [100, '19:00'], [120, '21:00'], [140, '23:00']],
+            font: {
+              size: 11,
+              family: 'Arial, sans-serif',
+              color: '#70737c'
+            },
+            reserveSpace: false
+          }
+    		});
+
+        $.plot('#flotChart3', [{
+            data: flotSampleData5,
+            color: '#6610f2'
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 0.06 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: true,
+            min: 0,
+            max: 120,
+            color: 'rgba(0,0,0,0.08)'
+          },
+    			xaxis: {
+            show: true,
+            color: 'rgba(0,0,0,0.08)'
+          }
+    		});
+
+        $.plot('#flotChart4', [{
+            data: flotSampleData4,
+            color: '#00cccc'
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 0.06 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: true,
+            min: 0,
+            max: 120,
+            color: 'rgba(0,0,0,0.08)'
+          },
+    			xaxis: {
+            show: true,
+            color: 'rgba(0,0,0,0.08)'
+          }
+    		});
+
+        $.plot('#flotChart5', [{
+            data: flotSampleData3,
+            color: '#007bff'
+          }], {
+    			series: {
+    				shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 0.06 } ] }
+            }
+    			},
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+    			yaxis: {
+            show: true,
+            min: 0,
+            max: 120,
+            color: 'rgba(0,0,0,0.08)'
+          },
+    			xaxis: {
+            show: true,
+            color: 'rgba(0,0,0,0.08)'
+          }
+    		});
+
+        $('#navComplex').lightSlider({
+          autoWidth: true,
+          pager: false,
+          slideMargin: 3,
+          onSliderLoad: function(el) {
+            $('.lSPrev').addClass('disabled');
+          },
+          onBeforeSlide: function(el) {
+            var curSlide = el.getCurrentSlideCount();
+            var totalSlide = el.getTotalSlideCount();
+
+            if(curSlide === 1) {
+              $('.lSPrev').addClass('disabled');
+            } else {
+              $('.lSPrev').removeClass('disabled');
+            }
+
+            if((totalSlide - 3) === curSlide) {
+              $('.lSNext').addClass('disabled');
+            } else {
+              $('.lSNext').removeClass('disabled');
+            }
+          }
+        });
+
+        $('.az-nav-tabs .tab-link').on('click', function(e) {
+          e.preventDefault();
+          $(this).addClass('active');
+          $(this).parent().siblings().find('.tab-link').removeClass('active');
+
+          var target = $(this).attr('href');
+          $(target).addClass('active');
+          $(target).siblings().removeClass('active');
+        })
+
+
+      });
+    </script>
     
 </html>
