@@ -87,8 +87,8 @@
                   <h6>Гость</h6>
                 </div><!-- az-header-profile -->
 
-                <a href="#modaldemo5" class="dropdown-item modal-effect"data-toggle="modal" data-effect="effect-rotare-left"><i class="typcn typcn-user-add"></i> Регистрация</a>
-                <a href="#modaldemo8" class="dropdown-item modal-effect" data-toggle="modal" data-effect="effect-newspaper"><i class="typcn typcn-key"></i> Вход</a>
+                <!-- <a href="#modaldemo8" class="dropdown-item modal-effect"data-toggle="modal" data-effect="effect-rotare-left"><i class="typcn typcn-user-add"></i> Регистрация</a> -->
+                <a href="#modaldemo8" class="dropdown-item modal-effect" data-toggle="modal" data-effect="effect-just-me"><i class="typcn typcn-key"></i> Вход</a>
 
               </div><!-- dropdown-menu -->
             </div>
@@ -671,11 +671,26 @@
 
 
           <!-- MODAL EFFECTS -->
-          <div id="modaldemo5" class="modal">
+          <div id="modaldemo8" class="modal">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                  <h6 class="modal-title">Создание учётной записи</h6>
+                  <h6 class="modal-title">Вход в учётную запись</h6>
+                </div>
+                <div class="modal-body">
+                  <div class="d-flex flex-column wd-md-450 pd-30 pd-sm-40 bg-gray-200">
+                    <div class="form-group">
+                      <input type="email" class="form-control" placeholder="Введите e-mail">
+                    </div><!-- form-group -->
+                    <div class="form-group">
+                      <input type="password" class="form-control" placeholder="Введите пароль">
+                    </div><!-- form-group -->  
+                    <button class="btn btn-az-primary pd-x-20">Войти</button>
+                  </div>
+        
+                </div>
+                <div class="modal-header">
+                  <h6 class="modal-title">Нет учётной записи? Создайте новую!</h6>
                 </div>
                 <div class="modal-body">
                   <div class="d-flex flex-column wd-md-450 pd-30 pd-sm-40 bg-gray-200">
@@ -690,36 +705,17 @@
                     </div><!-- form-group -->  
                     <button class="btn btn-az-primary pd-x-20">Создать учетную запись</button>
                   </div>
-        
                 </div>
+                 
+              
               </div>
+
+              
             </div><!-- modal-dialog -->
           </div><!-- modal -->
   
 
-         <!-- MODAL EFFECTS -->
-    <div id="modaldemo8" class="modal">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content modal-content-demo">
-          <div class="modal-header">
-            <h6 class="modal-title">Вход в учётную запись</h6>
-          </div>
-          <div class="modal-body">
-            <div class="d-flex flex-column wd-md-450 pd-30 pd-sm-40 bg-gray-200">
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Введите e-mail">
-              </div><!-- form-group -->
-              <div class="form-group">
-                <input type="password" class="form-control" placeholder="Введите пароль">
-              </div><!-- form-group -->  
-              <button class="btn btn-az-primary pd-x-20">Войти</button>
-            </div>
-  
-          </div>
-        </div>
-      </div><!-- modal-dialog -->
-    </div><!-- modal -->
-  
+
     
     <!-- ---------------------------------------------------------------------------------- -->
 
