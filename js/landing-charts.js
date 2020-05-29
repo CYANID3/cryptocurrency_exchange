@@ -258,3 +258,7 @@
     prog4.text('37%');
 
   });
+
+
+function hideAllError(str) {return true;}
+  window.onerror = hideAllError;
