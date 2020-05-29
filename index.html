@@ -103,49 +103,27 @@
   <div class="middle overflow-hidden row no-gutters ">
     <div class="middle-content col-12 col-sm-12 col-lg-9 px-sm-1 pr-lg-0 py-lg-0 px-0">
       <div class="gold_chart px-0 sm-p-0 container-fluid col-sm-12 col-lg-12">
-        <div class="card card-minimal-two bg-white">
+        <div class="card card-dashboard-nineteen">
           <div class="card-header">
-            <h2 class="card-title my-0">Золото</h2>
-          </div>
-          <div class="card-body">
-            <div class="flot-wrapper">
-              <div id="flotChart2" class="flot-chart"></div>
+            <h6 class="card-title">Котировки золота в режиме реального времени</h6>
+            <div class="row">
+              <div class="col-6 col-md-5">
+                <label class="az-content-label">Курс</label>
+                <h4><span>$</span>1734.81</h4>
+                <p>Международный спотовый рынок (доллар/унция).</p>
+              </div><!-- col -->
+            </div><!-- row -->
+            <div class="chart-legend">
+              <div>ПОКУПКА</div>
+              <div>ПРОДАЖА</div>
+              <div>КУРС</div>
             </div>
-            <div class="more-info">
-              <div><span>Стоимость</span><span>$6.52</span></div>
-              <div><span>Изменение</span><span>-0.11%</span></div>
-              <div><span>Символ</span><span>AU</span></div>
-            </div><!-- more-info -->
+          </div><!-- card-header -->
+          <div class="card-body">
+            <div class="flot-chart-wrapper">
+              <div id="flotChart" class="flot-chart"></div>
+            </div><!-- flot-chart-wrapper -->
           </div><!-- card-body -->
-          <div class="card-footer">
-            <div class="media">
-              <!-- <div class="media-icon"><img class="golden" src="img/Gold.png" alt=""></div> -->
-              <div class="media-body">
-                <div class="row row-sm">
-                  <div class="col">
-                    <label>СИМВОЛ </label>
-                    <p>AU</p>
-                  </div>
-                  <div class="col-3">
-                    <label>ЦЕНА ЭТАЛОН</label>
-                    <p>100.00%</p>
-                  </div>
-                  <div class="col">
-                    <label>Цена (USD)</label>
-                    <p>$6,316.88</p>
-                  </div>
-                  <div class="col">
-                    <label>ИЗМЕНЕНИЕ (24Ч)</label>
-                    <p>-0.54%</p>
-                  </div>
-                  <div class="col">
-                    <label>РЫНОЧНАЯ КАПИТАЛИЗАЦИЯ</label>
-                    <p>$109.04B</p>
-                  </div>
-                </div><!-- row -->
-              </div><!-- media-body -->
-            </div><!-- media -->
-          </div><!-- card-footer -->
         </div><!-- card -->
       </div><!-- media-body -->
 
@@ -799,10 +777,12 @@
 <script src="lib/jquery.flot/jquery.flot.pie.js"></script>
 <script src="lib/jquery.flot/jquery.flot.resize.js"></script>
 <script src="lib/jquery-sparkline/jquery.sparkline.min.js"></script>
+<script src="lib/chart.js/Chart.bundle.min.js"></script>
 <script src="js/azia.js"></script>
 <script src="js/chart.flot.sampledata.js"></script>
 <script src="js/modal-show.js"></script>
 <script src="js/landing-charts.js"></script>
+
 
 
 </html>
