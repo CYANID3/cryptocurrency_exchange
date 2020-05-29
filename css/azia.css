@@ -10145,16 +10145,16 @@ textarea.parsley-success:focus {
     display: block; }
 
 /* ###### 6.6 Navbar  ###### */
-@media (max-width: 991.98px) {
+/* @media (max-width: 991.98px) {
   .az-navbar-show {
     overflow: hidden; }
     .az-navbar-show .az-navbar-backdrop {
       display: block; }
     .az-navbar-show .az-navbar {
       display: block;
-      z-index: 1000; } }
+      z-index: 1000; } } */
 
-.az-navbar-backdrop {
+/* .az-navbar-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -10162,7 +10162,7 @@ textarea.parsley-success:focus {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.45);
   z-index: 900;
-  display: none; }
+  display: none; } */
 
 .az-navbar {
   position: fixed;

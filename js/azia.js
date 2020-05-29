@@ -53,11 +53,11 @@ $(function(){
     $('body').removeClass('az-content-body-show');
   })
 
-  // navbar backdrop for mobile only
-  $('body').append('<div class="az-navbar-backdrop"></div>');
-  $('.az-navbar-backdrop').on('click touchstart', function(){
-    $('body').removeClass('az-navbar-show');
-  });
+  // // navbar backdrop for mobile only
+  // $('body').append('<div class="az-navbar-backdrop"></div>');
+  // $('.az-navbar-backdrop').on('click touchstart', function(){
+  //   $('body').removeClass('az-navbar-show');
+  // });
 
   // Close dropdown menu of header menu
   $(document).on('click touchstart', function(e){
