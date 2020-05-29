@@ -27,7 +27,7 @@
     "gmaps": "^0.4.25",
     "ion-rangeslider": "^2.3.1",
     "ionicons": "^5.0.1",
-    "jquery": "^3.5.1",
+    "jquery": "^3.5.0",
     "jquery-sparkline": "^2.4.0",
     "jquery-steps": "^1.1.0",
     "jquery-ui": "^1.12.1",
