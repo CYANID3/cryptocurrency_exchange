@@ -1,5 +1,4 @@
-window.onload = function () {
-    let preloader = document.getElementById('preloader');
-    preloader.style.display = 'none';
+$(window).on("load", function () {
+    $("#preloader").delay(350).fadeOut("slow");
    
-   };
+   });
