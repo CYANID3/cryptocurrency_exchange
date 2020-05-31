@@ -260,5 +260,3 @@
   });
 
 
-function hideAllError(str) {return true;}
-  window.onerror = hideAllError;
