@@ -17,5 +17,9 @@ $(function(){
 
   });
 
+  // $('#exampleModal').on('shown.bs.modal', function () {
+  //   $('#myInput').trigger('focus')
+  // })
+
   function hideAllError(str) {return true;}
   window.onerror = hideAllError;

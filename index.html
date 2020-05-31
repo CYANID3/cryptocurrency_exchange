@@ -30,10 +30,6 @@
         </div><!-- az-header-center -->
         <div class="az-header-right">
           <div class="az-header-message">
-            <a href="#modaldemo8" class="px-3 modal-effect" data-toggle="modal" data-effect="effect-just-me"><i
-                class="typcn typcn-key text-white"></i></a>
-          </div><!-- az-header-message -->
-          <div class="az-header-message">
             <a href="#modaldemo3" class="modal-effect" data-toggle="modal" data-effect="effect-just-me">
               <i class="typcn typcn-messages text-white"></i></a>
           </div><!-- az-header-message -->
@@ -91,6 +87,11 @@
                 </div><!-- az-img-user -->
                 <h6>Гость</h6>
               </div><!-- az-header-profile -->
+              <a href="#settingsModal" class="dropdown-item"  data-toggle="modal" data-effect="effect-just-me" data-target="#settingsModal"><i class="typcn typcn-edit"></i> Редактировать профиль</a>
+              <a href="#modaldemo8" class="modal-effect dropdown-item" data-toggle="modal" data-effect="effect-just-me"><i class="typcn typcn-key"></i>Вход | Реристрация</a>
+              <a href="#scrollableModal" class="dropdown-item" data-toggle="modal" data-effect="effect-just-me" data-target="#scrollableModal"><i class="typcn typcn-info-large"></i>Информация</a>  
+              <a href="" class="dropdown-item"><i class="typcn typcn-power"></i>Выйти</a>
+             
             </div><!-- dropdown-menu -->
           </div>
         </div><!-- az-header-right -->
@@ -697,16 +698,9 @@
               <!-- content-inner -->
             </div>
             <!-- az-chat-body -->
-            <div class="az-chat-footer">
-              <nav class="nav">
-                <a href="" class="nav-link" data-toggle="tooltip" title="Add Photo"><i class="fas fa-camera"></i></a>
-                <a href="" class="nav-link" data-toggle="tooltip" title="Attach a File"><i
-                    class="fas fa-paperclip"></i></a>
-                <a href="" class="nav-link" data-toggle="tooltip" title="Add Emoticons"><i class="far fa-smile"></i></a>
-                <a href="" class="nav-link"><i class="fas fa-ellipsis-v"></i></a>
-              </nav>
-              <input type="text" class="form-control" placeholder="Type your message here..." />
-              <a href="" class="az-msg-send"><i class="far fa-paper-plane"></i></a>
+            <div class="az-chat-footer bg-gray-500 ">
+              <input type="text" class="form-control pl-3" placeholder="Введите текст..." />
+              <a href="" class="az-msg-send"><i class="fa fa-paper-plane text-dark"></i></a>
             </div>
             <!-- az-chat-footer -->
           </div>
@@ -765,6 +759,59 @@
       </div>
     </div><!-- modal-dialog -->
   </div><!-- modal -->
+
+  <!-- SETTINGS MODAL -->
+<div class="modal fade" id="settingsModal" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content modal-content-demo">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Редактирование профиля</h5>
+        <button type="button" class="close mr-3 mr-sm-0" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5 class="text-primary">Основное</h5>
+        <hr>
+        <div class="d-flex row">
+          <div class="form-group col-lg-6 col-12">
+            <h6 class=" text-dark">Имя</h6>
+            <input id="fname" type="text" class="form-control" placeholder="Введите имя">
+          </div><!-- form-group -->
+          <div class="form-group col-lg-6 col-12">
+            <h6 class=" text-dark">Фамилия</h6>
+            <input id="lname" type="text" class="form-control" placeholder="Введите фамилию">
+          </div><!-- form-group -->
+        </div>
+        <h5 class="text-primary mt-4">Паспортные данные</h5>
+        <hr>
+        <div class="d-flex row">
+          <div class="form-group col-12">
+            <h6 class=" text-dark">Данные №1</h6>
+            <input id="pd-1" type="text" class="form-control" placeholder="Введите данные">
+          </div><!-- form-group -->
+          <div class="form-group col-12">
+            <h6 class=" text-dark">Данные №2</h6>
+            <input id="pd-2" type="text" class="form-control" placeholder="Введите данные">
+          </div><!-- form-group -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-az-primary">Save changes</button>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFO MODAL -->
+<div class="modal fade" id="scrollableModal" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-dialog-scrollable">
+    ...
+  </div>
+  </div>
+
+</div>
 
 </body>
 
