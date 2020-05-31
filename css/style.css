@@ -7,6 +7,14 @@
 .form-control {
 	border-radius: 10px;
 }
+.btn{
+	font-size: 2rem;
+}
+#modaldemo3,
+#settingsModal,
+#scrollableModal {
+	background-color: rgba(0, 0, 0, .8);
+}
 @media (max-width: 768px){
 	.card-footer{
 		display: none;
@@ -22,9 +30,6 @@
 	.az-chat-footer{
 		border-radius: 10px;
 	}	
-}
-.btn{
-	font-size: 2rem;
 }
 
 
