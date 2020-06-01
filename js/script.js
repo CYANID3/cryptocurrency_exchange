@@ -1,4 +1,7 @@
 
   $(function () {
-    $('#datetimepicker9').datetimepicker();
+    $('#datetimepicker1').datetimepicker();
+});
+  $(function () {
+    $('#datetimepicker2').datetimepicker();
 });
