@@ -229,16 +229,38 @@
         <div class="card card-table-two col-12 col-lg-4 mr-1">
           <h5 class="card-title">Покупка-продажа</h5>
           <hr>
-          <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-            <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+          <div class="tabs">
+ <div class="tab px-0 mx-0">
+            <button class="tablinks col-4" onclick="openCity(event, 'London')">Покупка</button>
+            <button class="tablinks col-4" onclick="openCity(event, 'Paris')">Продажа</button>
+            <button class="tablinks col-4" onclick="openCity(event, 'Tokyo')">Кэширование</button>
           </div>
           
-          <!-- Tab content -->
-          <div id="London" class="tabcontent">
-            <h3>London</h3>
-            <p>London is the capital city of England.</p>
+          <div id="London" class="tabcontent ">
+            <div class="form-group d-flex justify-content-center my-4 text-center">
+              <h5 class="col-6 text-center align-baseline my-auto">Введите количество:</h5>
+                    <input type="number" id="" class="form-control datetimepicker-input col" data-target="#datetimepicker9"/>
+            </div>
+
+            <div class="form-group d-flex my-4">
+              <h5 class="col-6 text-center align-baseline my-auto">Введите сумму:</h5>
+                    <input type="number" id="" class="form-control datetimepicker-input col" data-target="#datetimepicker9"/>
+                    <div class="input-group-append">
+                      <span class="input-group-text">USD</span>
+                    </div>
+            </div>
+
+            <div class="form-group d-flex my-4">
+              <h5 class="col-6 text-center align-baseline my-auto">Введите дату и время:</h5>
+                <div class="input-group date mx-0 px-0 col" id="datetimepicker9" data-target-input="nearest">
+                    <input type="text" id="" class="form-control datetimepicker-input" data-target="#datetimepicker9"/>
+                    <div class="input-group-append" data-target="#datetimepicker9" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                </div>
+            </div>
+          
+            
           </div>
           
           <div id="Paris" class="tabcontent">
@@ -251,34 +273,17 @@
             <p>Tokyo is the capital of Japan.</p>
           </div>
 
+          </div>
+         
+
 
           <hr> 
           
           
-          <div class="container">
-            <div class="col-sm-6">
-                <div class="form-group">
-                    <div class="input-group date" id="datetimepicker9" data-target-input="nearest">
-                        <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker9"/>
-                        <div class="input-group-append" data-target="#datetimepicker9" data-toggle="datetimepicker">
-                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <script type="text/javascript">
-                $(function () {
-                    $('#datetimepicker9').datetimepicker({
-                        icons: {
-                            time: "fa fa-clock-o",
-                            date: "fa fa-calendar",
-                            up: "fa fa-arrow-up",
-                            down: "fa fa-arrow-down"
-                        }
-                    });
-                });
-            </script>
-        </div>
+       
+        
+        
+     
 
 
 
@@ -765,6 +770,7 @@
 <script src="js/preloader.js"></script>
 <script src="js/tabs.js"></script>
 <script src="js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="js/script.js"></script>
 
 
 </html>
