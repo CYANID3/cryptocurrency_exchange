@@ -1,7 +1,7 @@
 ::-webkit-scrollbar {
 	width: 0px;
 }
-.depositary_coins {
+.transactions {
 	height: 100%;
 }
 .form-control {
@@ -30,6 +30,10 @@
 	.az-chat-footer{
 		border-radius: 10px;
 	}	
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: red;
 }
 
 
