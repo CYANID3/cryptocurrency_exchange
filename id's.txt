@@ -1,0 +1,15 @@
+Gold chart id - #flotChart
+Lots body id - #lots
+
+Buy quantity input - #buyQuantity
+Buy summary input - #buySummary
+Buy datatime - #datetimepicker1
+
+Sold quantity input - #soldQuantity
+Sold summary input - #soldSummary
+Sold datatime - #datetimepicker2
+
+Cash quantity input - #cashQuantity
+Cash summary input - #cashSummary
+
+transaction button id - #transactionBtn
