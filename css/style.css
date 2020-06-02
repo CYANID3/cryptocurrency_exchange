@@ -1,6 +1,10 @@
 ::-webkit-scrollbar {
 	width: 0px;
 }
+body {
+	font-family: 'Ruda', sans-serif !important;
+	font-weight: bolder;
+  }
 .transactions {
 	height: 100%;
 }
