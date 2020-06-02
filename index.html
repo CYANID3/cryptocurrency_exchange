@@ -233,17 +233,23 @@
 
           <hr>
 
-          <div class="tabs">
+          <!-- TABS -->
 
-           <div class="tab px-0 mx-0">
-            <button class="tablinks col-4" onclick="openCity(event, 'BUY')">Покупка</button>
-            <button class="tablinks col-4" onclick="openCity(event, 'SOLD')">Продажа</button>
-            <button class="tablinks col-4" onclick="openCity(event, 'CASH')">Кэшировать</button>
-          </div>
-          
+          <div class="tabs">
+            <div class="card bd-0">
+              <div class="card-header bg-gray-200 bd-b-0-f pd-b-0">
+                <nav class="nav nav-tabs">
+                  <a class="nav-link col text-center active" data-toggle="tab" href="#tabCont1">Покупка</a>
+                  <a class="nav-link col text-center " data-toggle="tab" href="#tabCont2">Продажа</a>
+                  <a class="nav-link col text-center " data-toggle="tab" href="#tabCont3">Кэшировать</a>
+                </nav>
+              </div><!-- card-header -->
+  
+              <div class="card-body bd bd-t-0 tab-content p-2">
+        
           <!-- TAB BUYING -->
 
-          <div id="BUY" class="tabcontent ">
+          <div id="tabCont1" class="tab-pane active show">
             <div class="form-group d-flex justify-content-center my-4 text-center">
               <h5 class="col-6 text-center align-baseline my-auto">Введите количество:</h5>
                     <input type="number" id="buyQuantity" class="form-control col"/>
@@ -266,13 +272,11 @@
                     </div>
                 </div>
             </div>
-          
-            
           </div>
 
           <!-- TAB SOLDING  -->
-          
-          <div id="SOLD" class="tabcontent">
+
+          <div id="tabCont2" class="tab-pane">
             <div class="form-group d-flex justify-content-center my-4 text-center">
               <h5 class="col-6 text-center align-baseline my-auto">Введите количество:</h5>
                     <input type="number" id="soldQuantity" class="form-control col"/>
@@ -295,33 +299,35 @@
                     </div>
                 </div>
             </div>
-          </div>
+          </div>         
 
             <!-- TAB CASHING -->
           
-          <div id="CASH" class="tabcontent">
-            <div class="form-group d-flex justify-content-center my-4 text-center">
-              <h5 class="col-6 text-center align-baseline my-auto">Введите количество:</h5>
-                    <input type="number" id="cashQuantity" class="form-control col"/>
-            </div>
+            <div id="tabCont3" class="tab-pane">
+              <div class="form-group d-flex justify-content-center my-4 text-center">
+                <h5 class="col-6 text-center align-baseline my-auto">Введите количество:</h5>
+                      <input type="number" id="cashQuantity" class="form-control col"/>
+              </div>
+  
+              <div class="form-group d-flex my-4">
+                <h5 class="col-6 text-center align-baseline my-auto">Сумма:</h5>
+                <h4 id="cashSummary" class="col text-center tx-success my-auto"> 12 </h4>           
+              </div>
 
-            <div class="form-group d-flex my-4">
-              <h5 class="col-6 text-center align-baseline my-auto">Сумма:</h5>
-              <h4 id="cashSummary" class="col text-center tx-success my-auto"> 12 </h4>           
             </div>
-          </div>
-          </div>
-         
+          </div><!-- card-body -->
+        </div><!-- card -->
+      </div>
+
+      <!-- TABS END -->
 
           <hr> 
           
-
           <div class="d-flex ">
             <button id="transactionBtn" class="btn btn-success btn-block btn-rounded col-4 col-md-4 px-0 text-center my-1 display-1">ПРИМЕНИТЬ</button>
           </div>
         </div><!-- card-dashboard-five -->
         
-
         <div class="card card-table-two col mt-sm-1 mt-lg-0">
           <h5 class="card-title">Ваша история</h5>
           <hr>
