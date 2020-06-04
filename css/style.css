@@ -8,6 +8,9 @@ body {
 .az-header-message{
 	margin-left: 15px;
 }
+.tabs{
+	font-family: Roboto;
+}
 .transactions {
 	height: 100%;
 }
