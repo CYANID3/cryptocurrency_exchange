@@ -5,6 +5,9 @@ body {
 	font-family: 'Ruda', sans-serif !important;
 	font-weight: bolder;
   }
+.az-header-message{
+	margin-left: 15px;
+}
 .transactions {
 	height: 100%;
 }
@@ -16,6 +19,7 @@ body {
 }
 #modaldemo3,
 #settingsModal,
+#registrationModal,
 #scrollableModal {
 	background-color: rgba(0, 0, 0, .8);
 }
@@ -34,10 +38,6 @@ body {
 	.az-chat-footer{
 		border-radius: 10px;
 	}	
-}
-
-.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
-    background-color: red;
 }
 
 
