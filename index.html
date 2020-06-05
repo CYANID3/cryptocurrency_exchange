@@ -147,11 +147,11 @@
         <div class="card card-table-two mr-1 col-12 col-lg-12 mt-sm-3">
           <h5 class="card-title">ЛОТЫ</h5>
           <hr>
-          <div class="table-responsive" >
+          <div class="table-responsive" id="lots_list" >
             <table class="table table-striped table-dashboard-two mg-b-0">
               <thead>
                 <tr>
-                  <th class="wd-lg-20p tx-left">Ники</th>
+                 <th class="wd-lg-20p tx-left">Ники</th>
                   <th class="wd-lg-20p tx-center">Статус</th>
                   <th class="wd-lg-20p tx-center">Количество</th>
                   <th class="wd-lg-20p tx-center">Цена</th>
@@ -159,7 +159,7 @@
                   <th class="wd-lg-20p tx-center">Активен до</th>
                 </tr>
               </thead>
-              <tbody id="zakazy_table">
+              <tbody>
                 <tr>
                   <td>Walter White </td>
                   <td class="tx-center tx-medium tx-danger">Продаю</td>
@@ -294,7 +294,7 @@
                 </div>
             </div>
             <div class="d-flex ">
-              <button id="transactionBtn" class="btn btn-success btn-block btn-rounded col-4 col-md-4 px-0 text-center  mt-4 display-1">КУПИТЬ</button>
+              <button id="buyBtn" class="btn btn-success btn-block btn-rounded col-4 col-md-4 px-0 text-center  mt-4 display-1">КУПИТЬ</button>
             </div>
           </div>
 
@@ -323,7 +323,7 @@
                 </div>
             </div>
             <div class="d-flex ">
-              <button id="transactionBtn" class="btn btn-danger btn-block btn-rounded col-4 col-md-4 px-0 text-center  mt-4 display-1">ПРОДАТЬ</button>
+              <button id="soldBtn" class="btn btn-danger btn-block btn-rounded col-4 col-md-4 px-0 text-center  mt-4 display-1">ПРОДАТЬ</button>
             </div>
           </div>         
 
@@ -340,7 +340,7 @@
                 <h4 id="cashSummary" class="col text-center tx-success my-auto"> 12 </h4>           
               </div>
               <div class="d-flex ">
-                <button id="transactionBtn" class="btn btn-info btn-block btn-rounded col-4 col-md-4 px-0 text-center mt-4 display-1">КЭШИРОВАТЬ</button>
+                <button id="cashBtn" class="btn btn-info btn-block btn-rounded col-4 col-md-4 px-0 text-center mt-4 display-1">КЭШИРОВАТЬ</button>
               </div>
 
             </div>
@@ -706,15 +706,13 @@
         </div>
         <div class="modal-body">
           <div class="d-flex flex-column wd-md-500 pd-20 pd-sm-25 bg-gray-200">
-            <div class="form-group">
+            <form class="form-group">
               <h6 class=" text-dark">E-mail</h6>
               <input type="email" class="form-control" placeholder="Введите e-mail">
-            </div><!-- form-group -->
-            <div class="form-group">
               <h6 class=" text-dark">Пароль</h6>
               <input type="password" class="form-control" placeholder="Введите пароль">
-            </div><!-- form-group -->
-            <button class="btn btn-az-primary btn-rounded pd-x-20">Войти</button>
+            </ащ><!-- form-group -->
+            <button id="loginBtn" class="btn btn-az-primary mt-4 btn-rounded pd-x-20">Войти</button>
           </div>
         </div>
       </div>
@@ -766,7 +764,7 @@
                 <h6 class=" text-dark">Паспортные данные</h6>
                 <input type="password" class="form-control" placeholder="Подтвердите пароль">
               </div><!-- form-group -->
-              <button class="btn btn-az-primary btn-rounded pd-x-20">Зарегистрироваться</button>
+              <button id="regBtn" class="btn btn-az-primary btn-rounded pd-x-20">Зарегистрироваться</button>
             </div>
         </div>
         </div>
@@ -794,48 +792,68 @@
 <script src="js/script.js"></script>
 <script src="js/socket.js"></script>
 
+<!-- SUBSCRIPT -->
+<script>
+buyBtn.onclick = function() {
+  alert ("Кнопка покупки работает");
+}
+soldBtn.onclick = function() {
+  alert ("Кнопка продажи работает");
+}
+cashBtn.onclick = function() {
+  alert ("Кнопка кэширования работает");
+}
+regBtn.onclick = function() {
+  alert ("Кнопка регистрации работает");
+}
+loginBtn.onclick = function() {
+  alert ("Кнопка логина работает");
+}
 
 
+
+</script>
+
+<!-- SOCKET.IO -->
 <script>
 // Создаем переменную socket
 var socket = io();
 
 // получаем с сервера 'show_mega_pays' и выдаем сообщение "Загрузка реестра mega"
-socket.emit("show_mega_pays", { message: "Загрузка реестра mega"});
+socket.emit("lots", { message: "Загрузка реестра mega"});
 
 // здесь отправляем на сервер 'show_mega_pays' при помощи socket.on() и создаем функцию
-socket.on("show_mega_pays", function(data){
+socket.on("lots", function(data){
 
 // и вырисовываем таблицу из полученных данных
-var s='<table class="table table-striped mg-b-0">'+
+var lotsList='<table class="table table-striped table-dashboard-two mg-b-0">'+
               "<thead>"+
                 "<tr>"+
-                 "<th>Код</th>"+
-                  "<th>Дата</th>"+
-                  "<th>Заказ</th>"+
-                  "<th>Сумма</th>"+
-                  "<th>ID</th>"+
-                  "<th>IDDATE</th>"+
+                 " <th class='wd-lg-20p tx-left'>Ники</th>"+
+                 " <th class='wd-lg-20p tx-center'>Статус</th>"+
+                 " <th class='wd-lg-20p tx-center'>Количество</th>"+
+                 " <th class='wd-lg-20p tx-center'>Цена</th>"+
+                 " <th class='wd-lg-20p tx-center'>Сумма</th>"+
+                 " <th class='wd-lg-20p tx-center'>Активен до</th>"+
                   "</tr>"+
               "</thead>"+
               "<tbody>";
 for (var i=0;i<data.data.recordset.length; i++) {               
-     s+='<tr>'+
-                   '<th scope="row">'+data.data.recordset[i].codeid+'</th>'+
-                  '<td>'+data.data.recordset[i].date_system+'</td>'+
-                  '<td>'+data.data.recordset[i].account+'</td>'+
-                  '<td>'+data.data.recordset[i].amount+'</td>'+
-                  '<td>'+data.data.recordset[i].txn_id+'</td>'+
-                  '<td>'+data.data.recordset[i].txn_date+'</td>'+
-        '</tr>';
-}                  s+='</tbody>'+
+     lotsList+='<tr>'+
+                   '<th scope="row">'+data.data.recordset[i].id+'</th>'+
+                  '<td class="tx-center tx-medium tx-inverse">'+data.data.recordset[i].status+'</td>'+
+                  '<td  class="tx-center tx-medium tx-inverse">'+data.data.recordset[i].amount+'</td>'+
+                  '<td class="tx-center tx-medium tx-danger">'+data.data.recordset[i].cost+'</td>'+
+                  '<td class="tx-center tx-medium tx-invers">'+data.data.recordset[i].sum+'</td>'+
+                  '<td class="tx-center tx-medium tx-info">'+data.data.recordset[i].txn_date+'</td>'+
+                '</tr>';
+}                  lotsList+='</tbody>'+
             '</table>';
 //здесь получаем по ID элемент и вставляем нашу переменную в которой хранится таблица с готовыми данными 
-document.getElementById("zakazy_table").innerHTML=s;
+document.getElementById("lots_list").innerHTML=lotsList;
 })
 
 </script>
-
 
 
 
