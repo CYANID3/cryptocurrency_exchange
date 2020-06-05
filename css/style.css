@@ -20,6 +20,10 @@ body {
 .btn{
 	font-size: 2rem;
 }
+.new::before {
+	display: none;
+}
+
 #modaldemo3,
 #settingsModal,
 #registrationModal,

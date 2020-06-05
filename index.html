@@ -460,6 +460,7 @@
                       <a href="">20+ more</a>
                     </div><!-- az-event-user -->
                   </div><!-- list-group-item -->
+
                   <div class="list-group-item">
                     <div class="event-indicator bg-primary"></div>
                     <label>Май 23 <span>ПОНЕДЕЛЬНИК</span></label>
@@ -824,6 +825,8 @@ socket.emit("lots", { message: "Загрузка реестра mega"});
 
 // здесь отправляем на сервер 'show_mega_pays' при помощи socket.on() и создаем функцию
 socket.on("lots", function(data){
+ 
+  
 
 // и вырисовываем таблицу из полученных данных
 var lotsList='<table class="table table-striped table-dashboard-two mg-b-0">'+
@@ -852,11 +855,7 @@ for (var i=0;i<data.data.recordset.length; i++) {
 //здесь получаем по ID элемент и вставляем нашу переменную в которой хранится таблица с готовыми данными 
 document.getElementById("lots_list").innerHTML=lotsList;
 })
-
 </script>
-
-
-
 
 
 </html>
